@@ -1,11 +1,12 @@
 @charset "UTF-8";
 body {
-  background: #fff;
+  background: #fafafa;
   font-family: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN','メイリオ', Meiryo, "ヒラギノ丸ゴ Pro W4", "Hiragino Maru Gothic Pro", 'ＭＳ Ｐゴシック', 'MS PGothic','Helvetica Neue', Helvetica, sans-serif;
   font-size: 12px;
   color: #a3a6a9;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  height: 100%; }
 
 .clearfix:after {
   content: "";
@@ -14,16 +15,27 @@ body {
 
 .Navigation {
   width: 100%;
+  background: #ffffff;
   border-bottom: 1px solid #dfdfdf;
-  margin-top: 40px; }
+  position: relative;
+  padding-top: 80px; }
   .Navigation__lists {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    list-style-type: none; }
+    list-style-type: none;
+    width: 460px;
+    position: absolute;
+    top: 41px;
+    left: 50%;
+    margin-left: -230px; }
   .Navigation__list {
     margin: 0;
     padding: 0;
     float: left; }
+    .Navigation__list--active .Navigation__link {
+      background: #fafafa;
+      color: #a6aaac;
+      border-bottom: 1px solid #fafafa; }
   .Navigation__link {
     color: #a3a6a9;
     display: block;
@@ -33,14 +45,9 @@ body {
     text-align: center;
     text-decoration: none;
     border-radius: 5px 5px 0 0;
-    border-top: 1px solid #dfdfdf;
-    border-left: 1px solid #dfdfdf;
-    border-right: 1px solid #dfdfdf; }
+    border: 1px solid #dfdfdf; }
     .Navigation__link:hover {
       color: #929699;
       background-color: #fafafa; }
-
-.Fuziwara {
-  font-size: 20px;
-  color: #f30;
-  font-weight: bold; }
+    .Navigation__link--last .Navigation__link {
+      margin-right: 0; }
